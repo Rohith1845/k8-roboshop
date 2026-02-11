@@ -23,7 +23,7 @@ spec:
       project: roboshop
       component: catalogue
       tier: backend
-  templates:
+  template:
     metadata:
       labels:
         project: roboshop
@@ -35,8 +35,8 @@ spec:
           image: krishnamsettyrohith/catalogue:v1
           imagePullPolicy: Always
           envFrom:
-          - configMapRef:
-            name: catalogue
+            - configMapRef:
+              name: catalogue
           ports: 
           - name: liveness-port
             containerPort: 8080
@@ -50,8 +50,8 @@ spec:
             httpGet:
             path: /health
             port: liveness-port
-          failureThreshold: 1
-          periodSeconds: 15
+            failureThreshold: 1
+            periodSeconds: 15
 ---
 apiVersion: v1
 kind: Service
