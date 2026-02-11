@@ -9,7 +9,7 @@ data:
 ---
 apiVersion: apps/v1
 kind: Deployment
-Metadata:
+metadata:
   name: catalogue
   namespace: roboshop
   labels: 
@@ -55,7 +55,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: catalogue
   namespace: roboshop
 spec:
