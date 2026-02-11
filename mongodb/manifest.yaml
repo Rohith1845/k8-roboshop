@@ -16,9 +16,13 @@ spec:
       tier: db
   template:
     metadata:
+      labels:
+        project: roboshop
+        component: mongodb
+        tier: db
     spec:
       containers:
-      - name: nginx
+      - name: mongodb
         image: krishnamsettyrohith/mongodb:v1
         imagePullPolicy: Always
         readinessProbe: 
@@ -34,7 +38,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: mongodb
   namespace: roboshop
 spec:
