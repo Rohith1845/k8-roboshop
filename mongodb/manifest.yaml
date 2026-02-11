@@ -24,12 +24,12 @@ spec:
         readinessProbe: 
           tcpSocket:
             port: 27017
-          initialSeconds: 10
+          initialDelaySeconds: 10
           periodSeconds: 10
         livenessProbe:
           tcpSocket:
             port: 27017
-          initialSeconds: 5
+          initialDelaySeconds: 5
           periodSeconds: 5
 ---
 apiVersion: v1
